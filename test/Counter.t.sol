@@ -15,6 +15,7 @@ contract CounterTest is Test {
     function testIncrement() public {
         counter.increment();
         assertEq(counter.number(), 1);
+        emit log_named_uint("the value is", counter.number());
     }
 
     function testSetNumber(uint256 x) public {
